@@ -1,8 +1,8 @@
 body {
     font: 20px "Gill Sans", Verdana, sans-serif;
     line-height: 1.8;
-    color: #000000;
-    background-color: #ac58b9;
+    color: #dcdcdc;
+    background-color: #111154;
     padding-top: 0px !important;
   }
 
@@ -14,7 +14,12 @@ p {font-size: 16px;}
 .margin {margin-bottom: 30px;}
 
 a {
-  color: #000000;
+  color: #dcdcdc;
+}
+
+hh{
+  font:30px "Gill Sans", Verdana, sans-serif;
+  color:#895321;
 }
 
 .container-fluid {
@@ -37,15 +42,15 @@ nav {
 .nav-title{
   margin-left: 15px;
   margin-right: 15px;
-  color: #000000;
+  color: #dcdcdc;
 }
 
 .nav-link {
-  border: 3px outset #a3a3a3;
+  border: 3px outset #545411;
   border-radius: 20px;
   padding: 10px 30px;
-  background-color: #a3a3a3;
-  color: #EEE7E8;
+  background-color: #115433;
+  color: #dcdcdc;
   transition: 0.3s;
 }
 
@@ -53,7 +58,7 @@ nav {
   border: 3px outset #FFFFFF;
   border-radius: 20px;
   padding: 10px 30px;
-  background-color: #a3a3a3;
+  background-color: #115433;
   transition: 0.3s;
 }
 
@@ -61,7 +66,7 @@ nav {
   border: 3px outset #FFFFFF;
   border-radius: 40px;
   padding: 10px 30px;
-  background-color: #a3a3a3;
+  background-color: #115433;
   color: #000000;
   transition: 0.3s;
 }
@@ -70,7 +75,7 @@ nav {
   border: 3px inset #FFFFFF;
   border-radius: 40px;
   padding: 10px 30px;
-  background-color: #a3a3a3;
+  background-color: #115433;
   transition: 0.3s;
 }
 
@@ -89,13 +94,13 @@ nav {
 }
 
 code {
-  background-color: #2d2b33;
+  background-color: #dcdcdc;
   color: #EEE7E8;
   font-family: 'Courier New', Courier, monospace;
 }
 
 .caption {
-  color: gray;
+  color: #dcdcdc;
   font-size: 16px;
   text-align: center;
   font-style: italic;
