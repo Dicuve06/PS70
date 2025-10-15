@@ -86,7 +86,8 @@
   the echo back is used to calculate the distance. Here is the main part of my code (I adapted it from the example 'Ping'): 
 </h5>
 <div class="scrollable-code" tabindex="0">
-  //These are the pins for our shoutingPin (the one that emits the sound), and for the listeningPin (the one that listens and waits for the sound to return)
+  <pre><code>
+// These are the pins for our shoutingPin (the one that emits the sound), and for the listeningPin (the one that listens and waits for the sound to return)
 const int shoutingPin = 26;
 const int listeningPin = 25;
 const int lightPin = 33;
@@ -94,7 +95,7 @@ const int lightPin = 33;
 void setup() {
   // initialize serial communication:
   Serial.begin(9600);
-  //shoutingPin is an Output pin while listeningPin is an input one
+  // shoutingPin is an Output pin while listeningPin is an input one
   pinMode(shoutingPin, OUTPUT);
   pinMode(listeningPin, INPUT);
   pinMode(lightPin, OUTPUT);
@@ -104,22 +105,22 @@ void loop() {
   // establish variables for duration of the ping, and the distance result
   // in inches and centimeters:
   long duration, inches, cm;
-  //Turns off the shoutingPin and then waits two microseconds using the delay function
+  // Turns off the shoutingPin and then waits two microseconds using the delay function
   digitalWrite(shoutingPin, LOW);
   delayMicroseconds(2);
-  //shoutingPin shouts and then waits 5 microseconds
+  // shoutingPin shouts and then waits 5 microseconds
   digitalWrite(shoutingPin, HIGH);
   delayMicroseconds(10);
-  //shoutingPin shuts up
+  // shoutingPin shuts up
   digitalWrite(shoutingPin, LOW);
-  //listeningPin listens
+  // listeningPin listens
   duration = pulseIn(listeningPin, HIGH);
 
   // convert the time into a distance
   inches = microsecondsToInches(duration);
   cm = microsecondsToCentimeters(duration);
 
-  //Writes the results
+  // Writes the results
   Serial.print(inches);
   Serial.print("in, ");
   Serial.print(cm);
@@ -134,9 +135,22 @@ void loop() {
   else{
     digitalWrite(lightPin, LOW);
     Serial.print("SHADOWS");
-  };
+  }
 }
+  </code></pre>
 </div>
+
+<style>
+.scrollable-code {
+  max-height: 300px;
+  overflow: auto;
+  background-color: #f5f5f5;
+  border: 1px solid #ccc;
+  padding: 10px;
+  font-family: monospace;
+  white-space: pre;
+}
+</style>
 
 <h5> The ultrasonic sensor circuit was the following:</h5>
 <img src="ultra.jpg".png alt="Exponential Behavior Graph" width="500" />
