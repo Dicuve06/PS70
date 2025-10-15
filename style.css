@@ -113,3 +113,13 @@ code {
 #aboutme {
   padding: 20px;
 }
+
+scrollablecode {
+   max-height: 220px; /* adjust height as needed */
+    overflow: auto;
+    background: #f8f9fa;
+    padding: 0.6rem;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    line-height: 1.25;
+}
