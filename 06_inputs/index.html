@@ -85,7 +85,7 @@
   a 'trigger' wave (shouts) and then listens for the echo (listns). The time it takes for the listening part to listen
   the echo back is used to calculate the distance. Here is the main part of my code (I adapted it from the example 'Ping'): 
 </h5>
-<scrollable-code>
+<div class="scrollable-code" tabindex="0">
   //These are the pins for our shoutingPin (the one that emits the sound), and for the listeningPin (the one that listens and waits for the sound to return)
 const int shoutingPin = 26;
 const int listeningPin = 25;
@@ -136,7 +136,7 @@ void loop() {
     Serial.print("SHADOWS");
   };
 }
-</scrollable-code>
+</div>
 
 <h5> The ultrasonic sensor circuit was the following:</h5>
 <img src="ultra.jpg".png alt="Exponential Behavior Graph" width="500" />
