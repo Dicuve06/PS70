@@ -37,11 +37,11 @@
   each other, ruining the sensor, To fix this we added hot glue to the corners. This worked well, but the aligator
   cip still touched the other layer, so it was relocated like this:
 </h5>
-<img src="S_2.jpg"Sensor" width="500" />
+<img src="S_2.jpg" alt="demonstration" width="500" />
 <h5> Fortunately, a friend from Purdue came to visit over the weekend and he agreed to help me demonstrate the sensor:
 </h5>
 <video width="640" height="480" controls>
-  <source src="blow.mp4" type="video/mp4">
+  <source src="Blow (1).mp4" type="video/mp4">
 </video>
 <h5> Here are the different capacitance values we got from the sensor:
   <ul>
@@ -69,7 +69,7 @@
   a 'trigger' wave (shouts) and then listens for the echo (listns). The time it takes for the listening part to listen
   the echo back is used to calculate the distance. Here is the main part of my code (I adapted it from the example 'Ping'): 
 </h5>
-<marquee>
+<marquee behavior="scroll" scrollamount="5">
   //These are the pins for our shoutingPin (the one that emits the sound), and for the listeningPin (the one that listens and waits for the sound to return)
 const int shoutingPin = 26;
 const int listeningPin = 25;
@@ -122,12 +122,28 @@ void loop() {
 }
 </marquee>
 
+<h5> The ultrasonic sensor circuit was the following:</h5>
 <img src="ultra.jpg".png alt="Exponential Behavior Graph" width="500" />
 
+<h5> As for the calibration segment of the assignment, I decided to use the sensor to light up an LED when
+  something was 10cm or closer to the sensor. Here is a video of the final result:
+</h5>
 <video width="640" height="480" controls>
   <source src="Hand.mp4" type="video/mp4">
 </video>
 
+<h3>Key Takeaways</h3>
+<br/>
+<h4>1. Capacitive sensors can measure a vast array of physical quantity, one has to be creative.</h4>
+<br/>
+<h4>2. Nature inspires technology. 
+</h4>
+<br/>
+<h4>3. Capacitive sensors report data with an exponentially decreasing accuracy 
+</h4>
+<br/>
+<h4>2. Ultrasonic sensors are reliable and straightforward. 
+</h4>
 
 </div>
 </xmp>
