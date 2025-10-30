@@ -103,10 +103,67 @@ and not be yet another difficulty.</h5>
   and I inserted the switch in the power transmission so that when the switch was on, the LED's would light up and 
   vice versa. I used the Neopixel library to control the LED strip. Here is a photo of the circuit:</h5>
 <img src="circuit.jpg" alt="Circuit for the turning signal system" width="500" />
-<h4>Here are snippets of my code</h4>
+<h4>Here are snippets of my code:</h4>
 <img src="CodeSnippet1.png" alt="Code snippet 1" width="500" />
 <img src="CodeSnippet2.png" alt="Code snippet 2" width="500" /> 
 <img src="CodeSnippet3.png" alt="Code snippet 3" width="500" />
+
+<div class="scrollable-code" tabindex="0">
+  <pre><code>
+#include 'opening french quotation'Adafruit_NeoPixel.h>
+#ifdef __AVR__
+ #include 'opening french quotation'avr/power.h> // Required for 16 MHz Adafruit Trinket
+#endif
+
+#define LED_PIN    25
+#define LED_COUNT 10 // Number of LED pixels in strip
+
+Adafruit_NeoPixel strip(LED_COUNT, LED_PIN, NEO_GRB + NEO_KHZ800);
+
+void setup() {
+#if defined(__AVR_ATtiny85__) && (F_CPU == 16000000)
+  clock_prescale_set(clock_div_1);
+#endif
+  strip.begin();           // INITIALIZE NeoPixel strip object (REQUIRED)
+  strip.show();            // Turn OFF all pixels ASAP
+  strip.setBrightness(255); //(max = 255)
+}
+
+void loop() {
+
+
+  theaterChase(strip.Color(255,   0,   0), 100); // Red, half brightness
+}
+
+void theaterChase(uint32_t color, int wait) {
+  for(int a=0; a less than 10; a++) {  // Repeat 10 times...
+    for(int b=0; b less than 3; b++) { //  'b' counts from 0 to 2...
+      strip.clear();         //   Set all pixels in RAM to 0 (off)
+      // 'c' counts up from 'b' to end of strip in steps of 3...
+      for(int c=b; c less than strip.numPixels(); c += 3) {
+        strip.setPixelColor(c, color); // Set pixel 'c' to value 'color'
+      }
+      strip.show(); // Update strip with new contents
+      delay(wait);  // Pause for a moment
+    }
+  }
+}
+
+  </code></pre>
+</div>
+
+<style>
+.scrollable-code {
+  max-height: 500px;
+  max-width: 1000px;
+  overflow: auto;
+  background-color: #010d27;
+  border: 1px solid #036a0f;
+  padding: 10px;
+  font-family: monospace;
+  color:#601521;
+}
+</style>
 <h4>Final Prototype</h4>
 <h5> After assembling all the components, I was able to create the final prototype of my turning signal system.
   Here are some videos demonstrating the final prototype:</h5>
