@@ -65,7 +65,7 @@
 a turn, specially at night. Adittionally, I want the gesture for turning the turning signal system on to feel natural
 and not be yet another difficulty.</h5>
 <h5> These are my original sketches and the video of a product I used for inspiration.</h5>
-<img src="Sketches.jpg" alt="Initial sketches for the turning signal system" width="500" />
+<img src="initialsketch.jpg" alt="Initial sketches for the turning signal system" width="500" />
 <video width="640" height="480" controls>
   <source src="./Shortened.mp4" type="video/mp4">
 </video>
@@ -96,8 +96,48 @@ and not be yet another difficulty.</h5>
 <h4>The base plate was quite straightforward since i was only looking for a tape to paste my LED strips and have 
   form of an arrow. Here is a photo of the baseplate:</h4>
 <img src="BasePlate.jpg" alt="Base plate for LED's" width="500" />
-<h4>Final Assembly and Circuit</h4>
-</h3>
+<h3>Circuit</h3>
+<h4>The circuit was also quite straightforward. I instructed the ESP32 to send a signal to the RGB LED strip
+  and I inserted the switch in the power transmission so that when the switch was on, the LED's would light up and 
+  vice versa. I used the Neopixel library to control the LED strip. Here is a photo of the circuit:</h4>
+<img src="Circuit.jpg" alt="Circuit for the turning signal system" width="500" />
+<h4>Here are snippets of my code</h4>
+<img src="CodeSnippet1.png" alt="Code snippet 1" width="500" />
+<img src="CodeSnippet2.png" alt="Code snippet 2" width="500" /> 
+<img src="CodeSnippet3.png" alt="Code snippet 3" width="500" />
+<h3>Final Prototype</h3>
+<h4> After assembling all the components, I was able to create the final prototype of my turning signal system.
+  Here are some videos demonstrating the final prototype:</h4>
+<video width="640" height="480" controls>
+  <source src="./Shortened.mp4" type="video/mp4">
+</video>
+<h4> These show the difference between hand signals and the turning signal system in a dark setting:</h4>
+<video width="640" height="480" controls>
+  <source src="./Demo.mp4" type="video/mp4">
+</video>
+<video width="640" height="480" controls>
+  <source src="./DemoGood.mp4" type="video/mp4">
+</video>
+<h3>Lessons Learned</h3>
+<h4> After assembling my protoype, I realized that I need a place to fit my microcontroller because it is currently
+  taped to the wheel frame. Additionally, I noticed that I am really satisfied with the project as a whole. I left
+  the switch attached for the week and so far I have not had any inconvenience using it; moreover, it feels natural. 
+  Since I am happy with the MVP, I will proceed to create the left turning signal system eventually, and I am contemplating
+  the possibility  of adding more features. So far I have come up with the 5 following ideas:
+</h4>
+<img src="finalsketch.PNG" alt="Final Sketch" width="500" />
+<img src="f1.jpg" alt="Ideas for additional features" width="500" />
+<img src="f2.jpg" alt="Ideas for additional features" width="500" />
+<img src="f3.PNG" alt="Ideas for additional features" width="500" />
+<img src="f4.jpg" alt="Ideas for additional features" width="500" />
+<img src="f5.jpg" alt="Ideas for additional features" width="500" />
+
+<h4> As the semester goes on, I'll assess the feasibility of each. I hope to obtain recommendations for possible 
+  additions to my project at the MVP presentation. I would also be interested in knowing if there are any special
+  type of RGN LED strips that would be more visible at night. I will discuss with the staff the possiblity of purchasing
+  waterproof powerful RGB LED strips, ideal for the rainy weather.
+</h4>
+
 <h5> The prototype used the following components:
   <ul>
     <li> Right switch mechanism</li>
@@ -115,7 +155,7 @@ and not be yet another difficulty.</h5>
 <h3>Key Takeaways</h3>
 <h5> 
   <ul>
-    <li> Always fround the oscilloscope</li>
+    <li> Always ground the oscilloscope</li>
     <li> When prototyping, a lot of things will change along the way</li>
     <li> Always start at least 4 days in advance</li>
     <li> Ask questions to the staff about which devices to use for specific tasks</li>
