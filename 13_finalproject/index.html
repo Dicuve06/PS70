@@ -79,7 +79,75 @@
 </h5>
 <br/>
 <h5> Download my code ! </h5>
-<h5></h5>
+<h5> The way this works is that the xiao is checking the state of the switches (ON or OFF) every 2 seconds. Depending
+  on that state, it sends a message to the ESP32 via ESP-NOW protocol. The ESP32 is always listening for messages
+  and when it receives one, it follows the instruction the xiao gives it (if the xiao says left is ON, turn on the left signal).
+  I am extremely happy with how this worked out and I learned a lot. I focused on making an abstraction of my project 
+  and thus included a green LED representing the left turning signal. Here is the first result. 
+</h5>
+
+<video width="640" height="480" controls>
+  <source src="0.mp4" type="video/mp4">
+</video>
+
+<h5> This then evolved to this to incoporate both lights:</h5>
+
+<video width="640" height="480" controls>
+  <source src="0.mp4" type="video/mp4">
+</video>
+
+<h4>4. Encapsulate</h4>
+<h5> Lastly, one of the most important things was to ensure that everything wuold fit within the tight spaces I had created. 
+  Obviously, no breadboard would be either reliable nor small enough to fit within the case. Consequently, I took my xiao circuit,
+  and started shortening wires and soldering everything. I enjoyed this process a lot since I hadn't had an opportunity to get 
+  deep into soldering before. The most challengin part of the process was to de solder the head pins from the xiao. I used 
+  the desoldering pump. After the process, this was my result:
+</h5>
+<img width="640" height="640" src="soldered.jpg">
+<h5>New challenges emerged because trying the circuit, one switch was broken, and so I had to replace it. Additionally,
+  I realized that I needed to use duct tape to avoid shorts or unwanted contacts. Finally, I encapsulated everything
+  within the case. Here is the final result:
+</h5>
+<img width="640" height="640" src="final.jpg">
+<h5>As for the baseplate, since the ESP32 fried, I never got a chance install everything. However, I know what I am doing once 
+  I get my ESP32 replacement. I will solder everything, use duct tape to avoid shorts, and encapsulate everything within the case.
+  I already designed the case to have enough space for everything, including the spacious compartment for the battery pack.
+</h5>
+<img width="640" height="640" src="baseplate.jpg">
+<img width="640" height="640" src="baseplate2.jpg">
+<h5>Talking about the baseplate, I noticed that its angles were too sharp for the LED strip; consequently, 
+  I will redesign the baseplate to have broader curves so the LED strip can fit better and avoid breaking.
+</h5>
+
+<h3>Key Takeaways and Future actions</h3>
+<h5>I have to acknowledge that things will go wrong and learn from those mistakes. It is ok to fail and even desirable if 
+  you learn from your failures. 
+</h5>
+<br/>
+<h5>There is no reason to not ask for help to my peers with similar projects. I will reach out to Xander to ask about high voltage LED strips
+  and how to properly connect them to a microcontroller.
+</h5>
+<br/>
+<h5> Try new stuff and keep iterating!! I never thought that I would be able to make a wireless communication system
+  from scratch 3 months ago. However, by trying new things and pushing myself I was able to achieve it.
+</h5>
+<br/>
+<h5>
+  Creating an abstraction of a project is extremely helpful to debug and test. By using simple LEDs to represent the turning signals,
+  I was able to focus on the wireless communication first, which was the most challenging part.
+</h5>
+<br/> 
+<h5>
+  Next steps: 
+  <ul>
+    <li> Redesign baseplate with broader angles.</li>
+    <li> Ask for new ESP32 and finish soldering and encapsulating the baseplate. </li>
+    <li> Test the entire system together and make sure everything works as expected. </li>
+    <li> Ensure everything is waterproof. </li>
+    <li> Ride the bike and test in real life conditions. </li>
+
+  </ul>
+</h5>
 
 </div>
 </xmp>
